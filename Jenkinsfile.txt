@@ -42,6 +42,12 @@ pipeline {
             }
         }
 		//Code ends for stage Unit Test
+		stage('JaCoCo') {
+            steps {
+                sh 'mvn jacoco:report'
+            }
+        }
+		//Code ends for stage JaCoCo
     }
 }
 
